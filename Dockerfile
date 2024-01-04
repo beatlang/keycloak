@@ -7,9 +7,6 @@ ENV KC_METRICS_ENABLED=true
 # Configure a database vendor
 ENV KC_DB=postgres
 
-# Define the default stack to use for cluster communication and node discovery
-ENV KC_CACHE_STACK=kubernetes
-
 WORKDIR /opt/keycloak
 RUN /opt/keycloak/bin/kc.sh build
 
