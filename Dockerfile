@@ -20,5 +20,6 @@ COPY --from=builder /opt/keycloak/ /opt/keycloak/
 ENV KC_DB=postgres
 ENV KC_PROXY=edge
 ENV KC_LOG_LEVEL=INFO
+ENV KC_HOSTNAME_STRICT=false
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh"]
